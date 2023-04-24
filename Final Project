@@ -1,0 +1,151 @@
+#fixme- need basic info like game name, geography (dungeon or continent) tmeporary name of Godswar can be changed.
+#fixme- check for errors in my code, can fix tomorrow or Monday
+
+print ("****")
+print ("Welcome, player, to the game of Godswar!")
+input()
+print ("In this game, you choose your path!")
+input()
+print ("Do you wish to be a valiant hero, fighting to protect innocents from evil?")
+input()
+print ("Do you wish to play the villain, killing, and stealing as you please?")
+input()
+print ("The choice is yours. Only you can decide your future.")
+input()
+print ("For now though, let us define who you wish to be.\n")
+input()
+
+print("What is your name?")
+while True:
+	character_name = input()
+	print("Is", character_name, "correct? (yes/no)")
+	name_response = input ()
+	if name_response == ('no'):
+		print("Sorry, tell me your name again?")
+	elif name_response == ('yes'):
+	    print('Very nice to meet you,', character_name, '.')
+	    break
+	else:
+		print('I seem to have misunderstood. Was that a yes or no?')
+		confirmation = input()
+		if confirmation == ('no'):
+			print('Sorry, tell me your name again?')
+		if confirmation == ('yes'):
+		    print('Excellent choice,', character_name, '!')
+		break
+print ("What type of creature are you? Are you human, elf, dwarf, or something else entirely?")
+while True:
+    character_race = input()
+    print("You've chosen", character_race, '. Is this correct? (yes/no)')
+    race_response = input()
+    if race_response == ('yes'):
+        print('Interesting...')
+        break
+    elif race_response == ('no'):
+	    print('My apologies. Tell me once more.')
+    else:
+        print('I seem to have misunderstood. Was that a yes or no?')
+        confirmation = input()
+        if confirmation == ('no'):
+            print('My apologies. Tell me once more.')
+        if confirmation == ('yes'):
+            print('Interesting...')
+        break
+
+print ("Moving on. What gender do you wish to identify as? Male, Female? Perhaps you resonate with \"Other\" instead? (This will only affect your pronouns.)")
+while True:
+    character_gender = input()
+    male_choice = ('he/him/his')
+    female_choice = ('she/her/hers')
+    other_choice = ('they/them/theirs')
+    if character_gender == ('male'):
+        character_g = ('Male')
+        character_pronoun = male_choice
+    elif character_gender == ('female'):
+        character_g = ('Female')
+        character_pronoun = female_choice
+    elif character_gender == ('other'):
+        character_g = ('Other')
+        character_pronoun = other_choice
+    else: 
+        print('I don\'t think I\'ve heard that term before. Let\'s try to stick with Male, Female, or Other.')
+        continue
+
+    print (f"You've chosen to use", character_g, " pronouns (", character_pronoun, "). Do you wish to proceed with this choice?")
+    gender_response = input()
+    if gender_response == ("yes"):
+        print('Perfect. We\'re almost done!')
+        break
+    if gender_response == ('no'):
+         print('I am so sorry. Tell me again which pronouns you\'d like to use?')
+    else:
+         print('I seem to have misunderstood. Was that a yes or no?')
+         confirmation = input()
+         if confirmation == ('no'):
+            print('I am so sorry. Tell me again which pronouns you\'d like to use?')
+            if confirmation == ('yes'):
+                print('Perfect. We\'re almost done!')
+                break
+
+print('I would now like to see where your morals lie.')
+input()
+print('Do you wish to be a hero, or a villain?')
+
+while True:
+    character_alliance = input()
+    if character_alliance == ("hero"):
+        character_a = ('hero')
+    elif character_alliance == ("villain"):
+        character_a = ('villain')
+    else:
+        print('This is your story. You must choose one or the other.')
+        continue
+    print('You\'ve chosen to be a', character_a, '. Is this how you wish to be known?')
+    alliance_response = input()
+    if alliance_response == ('yes'):
+        print('Very well.')
+        break
+    if alliance_response == ('no'):
+	    print('Changed our mind have we? No worries, simply tell me again.')
+    else:
+        print('I seem to have misunderstood. Was that a yes or no?')
+        confirmation = input()
+        if confirmation == ('no'):
+            print('Changed our mind have we? No worries, simply tell me again.')
+        if confirmation == ('yes'):
+            print('Very well.')
+        break
+
+print('I now have a better understanding of who you are, or wish to be')
+input()
+print('As of now, you are', character_name, ', a', character_race, 'who uses', character_pronoun, 'pronouns.')
+input()
+print('You\'ve also chosen the', character_a, '\'s path, which is a bold choice.')
+input()
+print('I want nothing more than for you to succeed in your endeavors. With this, I\'d like to offer you a parting gift.')
+input()
+print('It is a potion. I\'m not the best at potion making, so I only have three choices:')
+print('A potion of life, a potion of swiftness, and a potion of strength.')
+input()
+print('It is completely free of charge, and can be used however you see fit.')
+input()
+
+while True:
+    potion_type = input('Which potion do you feel would best suit your needs? (life/swiftness/strength)')
+    if potion_type.lower() == "life":
+            print("Life. A wise choice.")
+            break
+    elif potion_type.lower() == "speed":
+            print("Switfness. You'll be faster than light itself.")
+            break
+    elif potion_type.lower() == "strength":
+            print("Strength. ")
+            break
+    else:
+         print("I told you I wasn't the best at potion-making. I only have three to offer: life, swiftness, and strength.")
+         continue
+
+input()
+print('Wonderful. It seems you are ready to start your journey.')
+input()
+print('This is where we part. I hope to see you soon,', character_name,'. I wish you the best of luck.')
